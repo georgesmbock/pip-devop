@@ -38,8 +38,7 @@ jobs:
     # The target branch
         target_branch: 'main'
         message: merging success !
-      environment:
-          github_token : "${{ TUKER }}
+        github_token : "${{ TUKER }}"
     
           
    
