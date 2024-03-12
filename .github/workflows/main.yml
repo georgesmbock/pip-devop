@@ -38,8 +38,6 @@ jobs:
     # The target branch
         target_branch: 'main'
         message: merging success !
-    # Github token
-        github_token: ${{ TUKER }}
     
           
    
