@@ -38,7 +38,7 @@ jobs:
     - name : Git Auto Commit
   # Vous pouvez épingler le commit exact ou la version.
   # utilise : stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d
-      uses: stefanzweifel/git-auto-commit-action@v5.0.0
+      uses: stefanzweifel/git-auto-commit-action@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
       with:
     # Message de validation
         commit_message: vers1
