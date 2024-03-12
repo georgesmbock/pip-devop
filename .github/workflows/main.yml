@@ -30,14 +30,31 @@ jobs:
       run: pip install -r requirements.txt
     - name: execution
       run: python3 main.py 
-    - name: Simple Auto Merge
+    #- name: Simple Auto Merge
   # You may pin to the exact commit or the version.
   # uses: itsyuvalcohen/merge-branches@2e62db2e6986229511a9258a7aa2646f99bc9e4e
-      uses: kenhowardpdx/auto-merge-action@v1.0.0
-      with:
-        token: "${{ secrets.TUKER }}"
+      #uses: kenhowardpdx/auto-merge-action@v1.0.0
+      #with:
+        #token: "${{ secrets.TUKER }}"
         #target_branch: main
-        merge_method: MERGE
+        #merge_method: MERGE
+
+    - name: pull-request-responsibility
+      uses: actions-automation/pull-request-responsibility@0.1.0
+      with:
+    # The set of actions to be run on pull requests. If not provided, only "assign" will be run by default.
+        # Provide a comma-separated list without spaces.request,assign,merge,copy-labels-linked assign,copy-labels-linked
+        Default: "request,assign,merge"
+
+        actions: request, assign, merge
+
+        token: "${{ secrets.TUKER }}"
+    # The Github team to pull reviewers from. Must be a valid team name from the repository's parent organization. REQUIRED to use the "request" action.
+#For example: "reviewers"
+    # The number of reviewers to request on PRs. Provide an integer. REQUIRED to use the "request" action.
+
+        num_to_request: 1
+          
             
           
    
