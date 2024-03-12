@@ -1,0 +1,38 @@
+name: Test
+
+on:
+  pull_request: 
+    types:
+      - opened
+    branches: 
+      - "main"
+    paths:
+      - 'main.py'
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4.1.1
+      with:
+        fetch-depth: 0
+    - name: Update pakages
+      run: sudo apt update
+    - name: Launch check code
+      run:  sudo apt install -y pycodestyle
+    - name: check code
+      run: pycodestyle --first main.py
+    - name: Specication
+      run: pip freeze main.py > requirements.txt
+    - name: Installation
+      run: pip -r install requirements.txt
+    - name: execution
+      run: python3 main.py 
+    - name: Git Auto Commit
+      uses: stefanzweifel/git-auto-commit-action@v5.0.0
+      with:
+        commit_message: version 1
+    
+  
+
+    
