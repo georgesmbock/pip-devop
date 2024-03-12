@@ -22,6 +22,8 @@ jobs:
       run:  sudo apt install -y pycodestyle
     - name: check code
       run: pycodestyle --first main.py
+    - name: Install librairies
+      run: sudo apt install python3-pandas && sudo apt install python3-requests  && sudo apt install python3-requests
     - name: Specication
       run: pip freeze main.py > requirements.txt
     - name: Installation
