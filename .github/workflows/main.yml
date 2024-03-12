@@ -35,7 +35,7 @@ jobs:
   # uses: itsyuvalcohen/merge-branches@2e62db2e6986229511a9258a7aa2646f99bc9e4e
       uses: itsyuvalcohen/merge-branches@v1.2.0
       with:
-        bracnche_target: 'main'
+        target_branch: 'main'
         message: "merging success !"
         github_token : "${{ secrets.TUKER }}"    
           
