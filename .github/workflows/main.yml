@@ -34,9 +34,6 @@ jobs:
   # You may pin to the exact commit or the version.
   # uses: itsyuvalcohen/merge-branches@2e62db2e6986229511a9258a7aa2646f99bc9e4e
       uses: "pascalgn/automerge-action@v0.16.2"
-      with:
-        target_branch: main
-        message: "merging success !"
       env:
           GITHUB_TOKEN: "${{ secrets.TUKER }}"    
           
