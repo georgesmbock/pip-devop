@@ -35,7 +35,7 @@ jobs:
   # uses: itsyuvalcohen/merge-branches@2e62db2e6986229511a9258a7aa2646f99bc9e4e
       uses: kenhowardpdx/auto-merge-action@v1.0.0
       with:
-        github_token: "${{ secrets.TUKER }}"
+        token: "${{ secrets.TUKER }}"
         #target_branch: main
         merge_method: MERGE
             
