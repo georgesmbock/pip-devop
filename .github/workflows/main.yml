@@ -40,10 +40,7 @@ jobs:
         message: merging success !
     # Github token
         github_token: ${{ TUKER }}
-    # Create a pull request if there are conflicts
-        create_pull_request: True
-    # Add the commit owner as assignee on the pull request
-        #add_assignee: # default is true
+    
           
    
   
